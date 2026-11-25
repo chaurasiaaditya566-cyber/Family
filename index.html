@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya's World - Family & Productivity Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Aditya's World 🚀</div>
+        <ul class="nav-links">
+            <li><button class="nav-btn active" onclick="openSection('home', this)">Home</button></li>
+            <li><button class="nav-btn" onclick="openSection('bio', this)">My Bio-Data</button></li>
+            <li><button class="nav-btn" onclick="openSection('family-hub', this)">👨‍👩‍👧‍👦 Family Hub</button></li>
+            <li><button class="nav-btn" onclick="openSection('todo', this)">To-Do List</button></li>
+            <li><button class="nav-btn" onclick="openSection('timer', this)">Focus Timer</button></li>
+            <li><button class="nav-btn" onclick="openSection('settings', this)">Settings</button></li>
+        </ul>
+        <button id="theme-toggle" class="theme-btn">🌙 Dark Mode</button>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container">
+        
+        <!-- 1. HOME SECTION -->
+        <section id="home" class="tab-content active">
+            <div class="hero-card">
+                <h1 id="greeting">Welcome to Aditya's World!</h1>
+                <p id="live-clock" class="clock">00:00:00</p>
+                <p class="subtitle">Aapka apna personal aur family dashboard — jahan milegi sari jankari ek hi jagah par.</p>
+                <button class="cta-btn" onclick="openSection('family-hub', document.querySelectorAll('.nav-btn')[2])">Explore Family Hub ✨</button>
+            </div>
+        </section>
+
+        <!-- 2. MY BIO-DATA SECTION -->
+        <section id="bio" class="tab-content">
+            <div class="card bio-card">
+                <div class="bio-img-container">
+                    <img src="aditya.jpeg" alt="Aditya Chaurasia">
+                </div>
+                <div class="bio-details">
+                    <h2>Aditya Chaurasia (Me)</h2>
+                    <p><strong>Age:</strong> 15 Years Old</p>
+                    <p><strong>Class:</strong> 10th (CBSE Board)</p>
+                    <p><strong>School:</strong> Maharishi Vidya Mandir School, Chhatarpur (M.P.)</p>
+                    <p><strong>Bio:</strong> Main ek student hoon jo coding aur technology seekh raha hoon aur yeh apni pehli website bana raha hoon! 🚀</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. FAMILY HUB SECTION -->
+        <section id="family-hub" class="tab-content">
+            <div class="card">
+                <h2 class="center-text">🌟 Chaurasia Family Hub (12 Members)</h2>
+                <p class="subtitle center-text">Kisi bhi member par click karke unka pura bio-data dekhein.</p>
+                
+                <!-- Family Members Selector Buttons -->
+                <div class="family-nav-grid">
+                    <button class="fam-tab-btn active" onclick="openFamilyMember('fam-dad', this)">Rajdeep (Father)</button>
+                    <button class="fam-tab-btn" onclick="openFamilyMember('fam-mom', this)">Pratibha (Mother)</button>
+                    <button class="fam-tab-btn" onclick="openFamilyMember('fam-dadi', this)">Ramrati (Grandmother)</button>
+                    <button class="fam-tab-btn" onclick="openFamilyMember('fam-uncle', this)">Narendra (Uncle)</button>
+                    <button class="fam-tab-btn" onclick="openFamilyMember('fam-aunt', this)">Sangeeta (Aunt)</button>
+                    <button class="fam-tab-btn" onclick="openFamilyMember('fam-b1', this)">Mayank (Brother)</button>
+                    <button class="fam-tab-btn" onclick="openFamilyMember('fam-b2', this)">Vikash (Brother)</button>
+                    <button class="fam-tab-btn" onclick="openFamilyMember('fam-bh1', this)">Charul (Bhabhi)</button>
+                    <button class="fam-tab-btn" onclick="openFamilyMember('fam-bh2', this)">Bhawana (Bhabhi)</button>
+                    <button class="fam-tab-btn" onclick="openFamilyMember('fam-sis', this)">Kavya (Sister)</button>
+                    <button class="fam-tab-btn" onclick="openFamilyMember('fam-nep', this)">Shresth (Nephew)</button>
+                    <button class="fam-tab-btn" onclick="openFamilyMember('fam-me', this)">Aditya (Me)</button>
+                </div>
+
+                <!-- Family Member Details Display Area -->
+                <div class="family-content-area">
+                    
+                    <!-- Dad -->
+                    <div id="fam-dad" class="fam-member-card active-fam">
+                        <img src="rajdeep.jpeg" alt="Rajdeep Chaurasia">
+                        <div class="fam-info">
+                            <h3>Rajdeep Chaurasia (Father)</h3>
+                            <p><strong>Age:</strong> 42 Years</p>
+                            <p><strong>Profession:</strong> Primary Government Teacher & Teacher at Kanera Public School. He also holds a degree in Pharmacy.</p>
+                            <p><strong>Role:</strong> Pillar and guide of our family.</p>
+                        </div>
+                    </div>
+
+                    <!-- Mom -->
+                    <div id="fam-mom" class="fam-member-card">
+                        <img src="pratibha.jpeg" alt="Pratibha Chaurasia">
+                        <div class="fam-info">
+                            <h3>Pratibha Chaurasia (Mother)</h3>
+                            <p><strong>Age:</strong> 39 Years</p>
+                            <p><strong>Profession:</strong> High School Teacher in M.L.B. Girls School (Teaches English Core).</p>
+                            <p><strong>Role:</strong> Heart of the home and an inspiring educator.</p>
+                        </div>
+                    </div>
+
+                    <!-- Grandmother -->
+                    <div id="fam-dadi" class="fam-member-card">
+                        <img src="ramrati.jpeg" alt="Ramrati Chaurasia">
+                        <div class="fam-info">
+                            <h3>Ramrati Chaurasia (Grandmother)</h3>
+                            <p><strong>Age:</strong> 80 Years Old</p>
+                            <p><strong>Profession:</strong> Retired Primary Government Teacher.</p>
+                            <p><strong>Health Note:</strong> Suffering from cataract, diabetes, and hypertension (uneven blood pressure). Carries a sphygmomanometer with her for regular checkups.</p>
+                        </div>
+                    </div>
+
+                    <!-- Uncle -->
+                    <div id="fam-uncle" class="fam-member-card">
+                        <img src="narendra.png" alt="Narendra Chaurasia">
+                        <div class="fam-info">
+                            <h3>Narendra Chaurasia (Uncle)</h3>
+                            <p><strong>Profession:</strong> Businessman</p>
+                            <p><strong>Details:</strong> Owns and manages his own grocery store.</p>
+                        </div>
+                    </div>
+
+                    <!-- Aunt -->
+                    <div id="fam-aunt" class="fam-member-card">
+                        <img src="sangeeta.png" alt="Sangeeta Chaurasia">
+                        <div class="fam-info">
+                            <h3>Sangeeta Chaurasia (Aunt)</h3>
+                            <p><strong>Profession:</strong> Homemaker</p>
+                            <p><strong>Details:</strong> Takes wonderful care of the household with great dedication.</p>
+                        </div>
+                    </div>
+
+                    <!-- Brother 1 -->
+                    <div id="fam-b1" class="fam-member-card">
+                        <img src="mayank.png" alt="Mayank Chaurasia">
+                        <div class="fam-info">
+                            <h3>Mayank Chaurasia (Brother)</h3>
+                            <p><strong>Profession:</strong> Working professional</p>
+                            <p><strong>Company:</strong> Prism Johnson Limited (Satna Branch).</p>
+                        </div>
+                    </div>
+
+                    <!-- Brother 2 -->
+                    <div id="fam-b2" class="fam-member-card">
+                        <img src="vikash.png" alt="Vikash Chaurasia">
+                        <div class="fam-info">
+                            <h3>Vikash Chaurasia (Brother)</h3>
+                            <p><strong>Profession:</strong> Primary Teacher</p>
+                            <p><strong>Workplace:</strong> Mania High School.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bhabhi 1 -->
+                    <div id="fam-bh1" class="fam-member-card">
+                        <img src="charul.png" alt="Charul Chaurasia">
+                        <div class="fam-info">
+                            <h3>Charul Chaurasia (Bhabhi)</h3>
+                            <p><strong>Profession:</strong> Dedicated and skilled homemaker.</p>
+                        </div>
+                    </div>
+
+                    <!-- Bhabhi 2 (Updated with new image) -->
+                    <div id="fam-bh2" class="fam-member-card">
+                        <img src="bhawana.jpeg" alt="Bhawana Chaurasia">
+                        <div class="fam-info">
+                            <h3>Bhawana Chaurasia (Bhabhi)</h3>
+                            <p><strong>Qualification:</strong> Biotechnical Engineer.</p>
+                        </div>
+                    </div>
+
+                    <!-- Sister -->
+                    <div id="fam-sis" class="fam-member-card">
+                        <img src="kavya.png" alt="Kavya Chaurasia">
+                        <div class="fam-info">
+                            <h3>Kavya Chaurasia (Sister)</h3>
+                            <p><strong>Age:</strong> 10 Years Old</p>
+                            <p><strong>Class:</strong> 4th standard, CBSE Kendriya Vidyalaya, Chhatarpur (M.P.).</p>
+                        </div>
+                    </div>
+
+                    <!-- Nephew (Updated with new image) -->
+                    <div id="fam-nep" class="fam-member-card">
+                        <img src="shresth.jpeg" alt="Shresth Chaurasia">
+                        <div class="fam-info">
+                            <h3>Shresth Chaurasia (Nephew)</h3>
+                            <p><strong>Age:</strong> 8 Months Baby</p>
+                            <p><strong>Role:</strong> The cutest and youngest member of our family! 👶</p>
+                        </div>
+                    </div>
+
+                    <!-- Me (Aditya) -->
+                    <div id="fam-me" class="fam-member-card">
+                        <img src="aditya.jpeg" alt="Aditya Chaurasia">
+                        <div class="fam-info">
+                            <h3>Aditya Chaurasia</h3>
+                            <p><strong>Age:</strong> 15 Years Old | Class 10th (CBSE)</p>
+                            <p><strong>School:</strong> Maharishi Vidya Mandir, Chhatarpur (M.P.)</p>
+                            <p><strong>Bio:</strong> Creator of this website! 💻✨</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. TO-DO LIST SECTION -->
+        <section id="todo" class="tab-content">
+            <div class="card">
+                <h2>📝 My To-Do List</h2>
+                <div class="todo-input-group">
+                    <input type="text" id="task-input" placeholder="Aaj kya karna hai? (e.g., Coding practice)...">
+                    <button onclick="addTask()" class="add-btn">Add</button>
+                </div>
+                <ul id="task-list"></ul>
+            </div>
+        </section>
+
+        <!-- 5. FOCUS TIMER SECTION -->
+        <section id="timer" class="tab-content">
+            <div class="card center-text">
+                <h2>⏱️ 25-Min Focus Timer</h2>
+                <p>Padhai ya coding ke liye focus karein.</p>
+                <div id="timer-display" class="timer-display">25:00</div>
+                <div class="timer-controls">
+                    <button onclick="startTimer()" class="add-btn">Start</button>
+                    <button onclick="pauseTimer()" class="secondary-btn">Pause</button>
+                    <button onclick="resetTimer()" class="danger-btn">Reset</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SETTINGS SECTION -->
+        <section id="settings" class="tab-content">
+            <div class="card">
+                <h2>⚙️ Settings & Preferences</h2>
+                <p class="subtitle">Yahan se aap apni website ki settings manage kar sakte hain.</p>
+                <div class="settings-group">
+                    <div class="setting-item">
+                        <span>Appearance Theme:</span>
+                        <button onclick="document.getElementById('theme-toggle').click()" class="secondary-btn">Toggle Dark/Light Mode</button>
+                    </div>
+                    <div class="setting-item">
+                        <span>Clear Saved To-Do Tasks:</span>
+                        <button onclick="localStorage.removeItem('adityaTasks'); location.reload();" class="danger-btn">Reset Tasks Data</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
